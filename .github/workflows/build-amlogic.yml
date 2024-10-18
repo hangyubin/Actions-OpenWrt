@@ -65,6 +65,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        
     - name: 加载自定义feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
@@ -131,17 +132,7 @@ jobs:
         echo -e "\n"
         echo "列出空间占用前10的目录或文件："
         sudo du -h --max-depth=1 /workdir/openwrt |sort -nr | head -10
-        
-    #- name: 打包内核
-    #  uses: unifreq/openwrt_packit@master
-    #  env:
-    #    WHOAMI: hangbin
-    #    OPENWRT_ARMVIRT: openwrt-armvirt/*.tar.gz
-    #    PACKAGE_SOC: s905d_s905x3_beikeyun
-       # KERNEL_AUTO_LATEST: false
-       # KERNEL_REPO_URL: https://github.com/quanjindeng/Actions_OpenWrt-Amlogic/tree/main/kernel
-    #    KERNEL_VERSION_NAME: 5.15.1_6.1
-    
+           
     - name: 打包内核
       uses: ophub/flippy-openwrt-actions@main
       env:
