@@ -80,11 +80,11 @@ rm -rf feeds/small8/opkg
 #curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.crt -o $NAME/core/server.crt
 #curl -L https://github.com/UnblockNeteaseMusic/server/raw/enhanced/server.key -o $NAME/core/server.key
 
-sed -i 's#https://github.com/breakings/OpenWrt#https://github.com/quanjindeng/Actions_OpenWrt-Amlogic#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
-sed -i 's#ARMv8#openwrt_armvirt_iStore#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
-sed -i 's#opt/kernel#kernel#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
+#sed -i 's#https://github.com/breakings/OpenWrt#https://github.com/quanjindeng/Actions_OpenWrt-Amlogic#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
+#sed -i 's#ARMv8#openwrt_armvirt_iStore#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
+#sed -i 's#opt/kernel#kernel#g' feeds/small8/luci-app-amlogic/root/etc/config/amlogic
 
-sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-mount/root/etc/init.d/cifs
+#sed -i 's#mount -t cifs#mount.cifs#g' feeds/luci/applications/luci-app-cifs-mount/root/etc/init.d/cifs
 
 #sed -i 's#<%+cbi/tabmenu%>##g' feeds/small8/luci-app-nginx-manager/luasrc/view/nginx-manager/index.htm
 
